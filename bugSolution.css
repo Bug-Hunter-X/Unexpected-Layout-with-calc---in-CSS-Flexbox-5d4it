@@ -1,0 +1,24 @@
+/* bug.css */
+.container {
+  display: flex;
+}
+
+.item {
+  background-color: lightblue;
+  /* Incorrect usage of calc() */
+  margin: 10px;
+  calc(100% - 20px);
+}
+
+/* bugSolution.css */
+.container {
+  display: flex;
+}
+
+.item {
+  background-color: lightgreen;
+  /* Correct usage of calc() */
+  width: 100%;
+  margin: 10px;
+  width: calc(100% - 20px);
+}
